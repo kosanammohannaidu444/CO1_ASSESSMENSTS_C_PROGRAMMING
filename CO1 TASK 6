@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+    int a = 5, b = 2;
+    float x = 5.0f, y = 2.0f;
+
+    printf("Integer Division = %d\n", a / b);
+    printf("Float Division = %.2f\n", x / y);
+    printf("Type Casting = %.2f\n", (float)a / b);
+
+    return 0;
+}
