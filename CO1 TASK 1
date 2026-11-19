@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <limits.h>
+
+typedef unsigned short meter_t;
+
+unsigned int consumption(meter_t previous, meter_t current)
+{
+    return (unsigned int)(meter_t)(current - previous);
+}
+
+int main()
+{
+    meter_t previous = 1200;
+    meter_t current = 1530;
+
+    printf("Previous Reading = %u\n", previous);
+    printf("Current Reading = %u\n", current);
+    printf("Units Consumed = %u\n",
+           consumption(previous, current));
+
+    previous = 65400;
+    current = 120;
+
+    printf("\nPrevious Reading = %u\n", previous);
+    printf("Current Reading = %u\n", current);
+    printf("Units Consumed = %u\n",
+           consumption(previous, current));
+
+    return 0;
+}
