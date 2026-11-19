@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+    long paise = 16250;
+
+    printf("Electricity Bill = Rs %ld.%02ld\n",
+           paise / 100, paise % 100);
+
+    return 0;
+}
